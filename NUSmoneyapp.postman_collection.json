@@ -1,0 +1,577 @@
+{
+	"variables": [],
+	"info": {
+		"name": "NUSmoneyapp",
+		"_postman_id": "6bdcb800-8dc9-13ff-4d8d-068f3f3068fc",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getTransactionsByUID",
+			"request": {
+				"url": {
+					"raw": "https://nus-moneyapp-backend.herokuapp.com/transactions/by-uid?user_id=61503e85fc13ae62f5000041",
+					"protocol": "https",
+					"host": [
+						"nus-moneyapp-backend.herokuapp.com"
+					],
+					"port": "443",
+					"path": [
+						"transactions",
+						"by-uid"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "61503e85fc13ae62f5000041",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Shanna\",\n    \"last_name\": \"C\",\n    \"email\": \"shannac0@indiegogo.com\",\n    \"phone\": \"68436413684\",\n    \"plan_id\": 1\n}\n\n"
+				},
+				"description": "getTransactionsByUID"
+			},
+			"response": [
+				{
+					"id": "9595cbbc-1c4a-4043-a233-4234487c0977",
+					"name": "getTransactionsByUID",
+					"originalRequest": {
+						"url": {
+							"raw": "https://nus-moneyapp-backend.herokuapp.com/transactions/by-uid?user_id=61503e85fc13ae62f5000041",
+							"protocol": "https",
+							"host": [
+								"nus-moneyapp-backend.herokuapp.com"
+							],
+							"port": "443",
+							"path": [
+								"transactions",
+								"by-uid"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "61503e85fc13ae62f5000041",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Shanna\",\n    \"last_name\": \"C\",\n    \"email\": \"shannac0@indiegogo.com\",\n    \"phone\": \"68436413684\",\n    \"plan_id\": 1\n}\n\n"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "3128",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 29 Sep 2021 05:01:49 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"c38-EshenETQVpXc+5S0/4K1T2DRU4M\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 44,
+					"body": "[{\"transaction_id\":\"61504ac7fc13ae132b000001\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Grocery\",\"amount\":687.21},{\"transaction_id\":\"61504ac7fc13ae132b00002a\",\"transaction_type\":\"debit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Outdoors\",\"amount\":1900.09},{\"transaction_id\":\"61504ac7fc13ae132b000036\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Outdoors\",\"amount\":1213.69},{\"transaction_id\":\"61504ac7fc13ae132b00008f\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Clothing\",\"amount\":1439.02},{\"transaction_id\":\"61504ac7fc13ae132b00009c\",\"transaction_type\":\"debit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Sports\",\"amount\":695.28},{\"transaction_id\":\"61504ac7fc13ae132b0000c2\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Outdoors\",\"amount\":1916.34},{\"transaction_id\":\"61504ac7fc13ae132b0000d4\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Health\",\"amount\":365.91},{\"transaction_id\":\"61504ac7fc13ae132b0000ee\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Books\",\"amount\":1707.4},{\"transaction_id\":\"61504ac7fc13ae132b000110\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Baby\",\"amount\":916.86},{\"transaction_id\":\"61504ac7fc13ae132b000124\",\"transaction_type\":\"debit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Movies\",\"amount\":1198.13},{\"transaction_id\":\"61504ac7fc13ae132b000149\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Beauty\",\"amount\":511.39},{\"transaction_id\":\"61504ac7fc13ae132b000155\",\"transaction_type\":\"debit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Garden\",\"amount\":450.17},{\"transaction_id\":\"61504ac8fc13ae132b000192\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Beauty\",\"amount\":1436.03},{\"transaction_id\":\"61504ac8fc13ae132b0001cc\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Garden\",\"amount\":1329.06},{\"transaction_id\":\"61504ac8fc13ae132b0001ce\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Industrial\",\"amount\":113.48},{\"transaction_id\":\"61504ac8fc13ae132b0001f2\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Books\",\"amount\":788.81},{\"transaction_id\":\"61504ac8fc13ae132b00021e\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Outdoors\",\"amount\":1969.55},{\"transaction_id\":\"61504ac8fc13ae132b000227\",\"transaction_type\":\"debit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Grocery\",\"amount\":58.94},{\"transaction_id\":\"61504ac8fc13ae132b000232\",\"transaction_type\":\"debit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Toys\",\"amount\":262.51},{\"transaction_id\":\"uydXE6Z8WGpYLnbqH3e9je\",\"transaction_type\":\"credit\",\"user_id\":\"61503e85fc13ae62f5000041\",\"transaction_title\":\"Games\",\"amount\":24.27}]"
+				}
+			]
+		},
+		{
+			"name": "addTransaction",
+			"request": {
+				"url": "https://nus-moneyapp-backend.herokuapp.com/transactions/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"transaction_type\": \"credit\",\n        \"user_id\": \"61503e85fc13ae62f5000041\",\n        \"transaction_title\": \"Games\",\n        \"amount\": 24.27\n    }"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "ed9fb29d-0506-48ff-8731-a3931dd0bafa",
+					"name": "addTransaction",
+					"originalRequest": {
+						"url": "https://nus-moneyapp-backend.herokuapp.com/transactions/add",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"transaction_type\": \"credit\",\n        \"user_id\": \"61503e85fc13ae62f5000041\",\n        \"transaction_title\": \"Games\",\n        \"amount\": 24.27\n    }"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "24",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "text/html; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 29 Sep 2021 05:02:07 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"18-w2/tYj769HSOqssZsCNwidP5Ol8\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 51,
+					"body": "Created new transaction!"
+				}
+			]
+		},
+		{
+			"name": "getUserByUID",
+			"request": {
+				"url": {
+					"raw": "https://nus-moneyapp-backend.herokuapp.com/user/by-uid?user_id=61503e85fc13ae62f5000041",
+					"protocol": "https",
+					"host": [
+						"nus-moneyapp-backend.herokuapp.com"
+					],
+					"port": "443",
+					"path": [
+						"user",
+						"by-uid"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "61503e85fc13ae62f5000041",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "select * from Users where user_id = '${request.query.user_id}'"
+			},
+			"response": [
+				{
+					"id": "16081eef-6863-4f1a-b23b-30fbfc0bb7a2",
+					"name": "getUserByUID",
+					"originalRequest": {
+						"url": {
+							"raw": "https://nus-moneyapp-backend.herokuapp.com/user/by-uid?user_id=61503e85fc13ae62f5000041",
+							"protocol": "https",
+							"host": [
+								"nus-moneyapp-backend.herokuapp.com"
+							],
+							"port": "443",
+							"path": [
+								"user",
+								"by-uid"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "61503e85fc13ae62f5000041",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "159",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 29 Sep 2021 05:01:42 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"9f-WSBSy+eOMK4alU6YrWH0qO+OroE\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 25,
+					"body": "[{\"user_id\":\"61503e85fc13ae62f5000041\",\"username\":\"Lucila\",\"password\":\"gejzkLkq\",\"email\":\"lgrob5@tuttocitta.it\",\"mobile\":\"8624669100\",\"ic_number\":\"S2386729X\"}]"
+				}
+			]
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"url": "https://nus-moneyapp-backend.herokuapp.com/user/all",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "getAllUsers"
+			},
+			"response": [
+				{
+					"id": "90ea5409-9935-4613-934c-aa65021a8b9b",
+					"name": "getAllUsers",
+					"originalRequest": {
+						"url": "https://nus-moneyapp-backend.herokuapp.com/user/all",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "7810",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 29 Sep 2021 05:01:39 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"1e82-/ZktQjK8air1eo+B5XHzmO04DAg\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 85,
+					"body": "[{\"user_id\":\"61503e85fc13ae62f500003c\",\"username\":\"Anatole\",\"password\":\"WOfNDBm\",\"email\":\"apriestman0@howstuffworks.com\",\"mobile\":\"5559312858\",\"ic_number\":\"S6084136H\"},{\"user_id\":\"61503e85fc13ae62f500003d\",\"username\":\"Jeanette\",\"password\":\"zpwb7Tk2\",\"email\":\"jlindmark1@sbwire.com\",\"mobile\":\"5515793301\",\"ic_number\":\"S1223171X\"},{\"user_id\":\"61503e85fc13ae62f500003e\",\"username\":\"Grove\",\"password\":\"7Co1kXSlKT\",\"email\":\"ggearing2@whitehouse.gov\",\"mobile\":\"3589959895\",\"ic_number\":\"S2796497V\"},{\"user_id\":\"61503e85fc13ae62f500003f\",\"username\":\"Cariotta\",\"password\":\"jBWWPRW\",\"email\":\"cbloore3@adobe.com\",\"mobile\":\"6732114401\",\"ic_number\":\"S8636585N\"},{\"user_id\":\"61503e85fc13ae62f5000040\",\"username\":\"Romola\",\"password\":\"frWgYR\",\"email\":\"rmyatt4@dell.com\",\"mobile\":\"8361279970\",\"ic_number\":\"S2495845I\"},{\"user_id\":\"61503e85fc13ae62f5000041\",\"username\":\"Lucila\",\"password\":\"gejzkLkq\",\"email\":\"lgrob5@tuttocitta.it\",\"mobile\":\"8624669100\",\"ic_number\":\"S2386729X\"},{\"user_id\":\"61503e85fc13ae62f5000042\",\"username\":\"Etta\",\"password\":\"nd17WIG5\",\"email\":\"esimmens6@springer.com\",\"mobile\":\"2223867834\",\"ic_number\":\"S1566892D\"},{\"user_id\":\"61503e85fc13ae62f5000043\",\"username\":\"Feliza\",\"password\":\"b3Ffh0Z\",\"email\":\"fjoiner7@dailymotion.com\",\"mobile\":\"4643648039\",\"ic_number\":\"S4819194O\"},{\"user_id\":\"61503e85fc13ae62f5000044\",\"username\":\"Frazier\",\"password\":\"WNiWc7Fg6pB\",\"email\":\"fspawton8@cpanel.net\",\"mobile\":\"3407281299\",\"ic_number\":\"S5325542G\"},{\"user_id\":\"61503e85fc13ae62f5000045\",\"username\":\"Nanine\",\"password\":\"GJbVRo6r0n\",\"email\":\"nbloxham9@ihg.com\",\"mobile\":\"5266596098\",\"ic_number\":\"S0523168O\"},{\"user_id\":\"61503e85fc13ae62f5000046\",\"username\":\"Jayme\",\"password\":\"GtD46mR2yj\",\"email\":\"jseatha@google.es\",\"mobile\":\"1719990433\",\"ic_number\":\"S8739338D\"},{\"user_id\":\"61503e85fc13ae62f5000047\",\"username\":\"Carlo\",\"password\":\"DDs0ZZct\",\"email\":\"ceadieb@livejournal.com\",\"mobile\":\"1077154811\",\"ic_number\":\"S1110143D\"},{\"user_id\":\"61503e85fc13ae62f5000048\",\"username\":\"Wolfie\",\"password\":\"IlKhwZcUehs3\",\"email\":\"whartasc@un.org\",\"mobile\":\"8555001360\",\"ic_number\":\"S0345570S\"},{\"user_id\":\"61503e85fc13ae62f5000049\",\"username\":\"Adiana\",\"password\":\"52ITR5\",\"email\":\"agillingd@biglobe.ne.jp\",\"mobile\":\"9585957888\",\"ic_number\":\"S8578934N\"},{\"user_id\":\"61503e85fc13ae62f500004a\",\"username\":\"Celie\",\"password\":\"puOZCNBtE3R\",\"email\":\"cstowgille@ezinearticles.com\",\"mobile\":\"9492983476\",\"ic_number\":\"S9536509R\"},{\"user_id\":\"61503e85fc13ae62f500004b\",\"username\":\"Alessandro\",\"password\":\"VSWbXJBGVQFK\",\"email\":\"apassief@linkedin.com\",\"mobile\":\"6152838472\",\"ic_number\":\"S0393953Q\"},{\"user_id\":\"61503e85fc13ae62f500004c\",\"username\":\"Omero\",\"password\":\"5sbJzvCZ\",\"email\":\"ohoyg@bizjournals.com\",\"mobile\":\"1058016636\",\"ic_number\":\"S0390579F\"},{\"user_id\":\"61503e85fc13ae62f500004d\",\"username\":\"Ulick\",\"password\":\"pqjjf66c\",\"email\":\"uidneyh@sphinn.com\",\"mobile\":\"7192454888\",\"ic_number\":\"S4020849R\"},{\"user_id\":\"61503e85fc13ae62f500004e\",\"username\":\"Christy\",\"password\":\"v0eaWeaV1SW\",\"email\":\"ckempsteri@tmall.com\",\"mobile\":\"4493054201\",\"ic_number\":\"S6200190H\"},{\"user_id\":\"61503e85fc13ae62f500004f\",\"username\":\"Wendy\",\"password\":\"eU01nRf\",\"email\":\"wpaceyj@umich.edu\",\"mobile\":\"3718227408\",\"ic_number\":\"S9092232K\"},{\"user_id\":\"61503e85fc13ae62f5000050\",\"username\":\"Micah\",\"password\":\"8iqODOf2XWb\",\"email\":\"mgabbettk@cnbc.com\",\"mobile\":\"7594245764\",\"ic_number\":\"S8122758X\"},{\"user_id\":\"61503e85fc13ae62f5000051\",\"username\":\"Jacobo\",\"password\":\"br6gBsgHfunj\",\"email\":\"jsmyl@cafepress.com\",\"mobile\":\"7018684104\",\"ic_number\":\"S8229144G\"},{\"user_id\":\"61503e85fc13ae62f5000052\",\"username\":\"Sholom\",\"password\":\"G9pFqRzw3\",\"email\":\"stossellm@xrea.com\",\"mobile\":\"4489287147\",\"ic_number\":\"S6282260A\"},{\"user_id\":\"61503e85fc13ae62f5000053\",\"username\":\"Odelia\",\"password\":\"0fPiMsj\",\"email\":\"oadnetn@mozilla.com\",\"mobile\":\"5858770851\",\"ic_number\":\"S6970133A\"},{\"user_id\":\"61503e85fc13ae62f5000054\",\"username\":\"Loralee\",\"password\":\"4B9Ad4\",\"email\":\"lchilderso@noaa.gov\",\"mobile\":\"2003589995\",\"ic_number\":\"S6943899U\"},{\"user_id\":\"61503e85fc13ae62f5000055\",\"username\":\"Linnet\",\"password\":\"QxVOWJv105\",\"email\":\"ljaukovicp@mediafire.com\",\"mobile\":\"2814617841\",\"ic_number\":\"S5145030T\"},{\"user_id\":\"61503e85fc13ae62f5000056\",\"username\":\"Elora\",\"password\":\"XpmEccVLdmL9\",\"email\":\"ejoderliq@soup.io\",\"mobile\":\"6597641571\",\"ic_number\":\"S3913599Z\"},{\"user_id\":\"61503e85fc13ae62f5000057\",\"username\":\"Wells\",\"password\":\"bJoceRkIxH\",\"email\":\"wfriarr@utexas.edu\",\"mobile\":\"9371393905\",\"ic_number\":\"S2285671C\"},{\"user_id\":\"61503e85fc13ae62f5000058\",\"username\":\"Fidelio\",\"password\":\"IqxVHc\",\"email\":\"fgillatts@sun.com\",\"mobile\":\"4288502080\",\"ic_number\":\"S6781512W\"},{\"user_id\":\"61503e85fc13ae62f5000059\",\"username\":\"Malchy\",\"password\":\"akbEZyS3uMRd\",\"email\":\"melwynt@flavors.me\",\"mobile\":\"6218043297\",\"ic_number\":\"S9353863P\"},{\"user_id\":\"61503e85fc13ae62f500005b\",\"username\":\"Sauncho\",\"password\":\"z6EnO70o76\",\"email\":\"smatejv@google.fr\",\"mobile\":\"8313098268\",\"ic_number\":\"S2329909H\"},{\"user_id\":\"61503e85fc13ae62f500005c\",\"username\":\"Mamie\",\"password\":\"KaoGGSeiyz\",\"email\":\"mdenorew@usgs.gov\",\"mobile\":\"4157990083\",\"ic_number\":\"S0558378V\"},{\"user_id\":\"61503e85fc13ae62f500005d\",\"username\":\"Prentiss\",\"password\":\"fpHtoK\",\"email\":\"pwaynex@cocolog-nifty.com\",\"mobile\":\"3197199637\",\"ic_number\":\"S8483919G\"},{\"user_id\":\"61503e85fc13ae62f500005e\",\"username\":\"Avie\",\"password\":\"9u6YBRFo\",\"email\":\"afayery@feedburner.com\",\"mobile\":\"8194732928\",\"ic_number\":\"S7813442R\"},{\"user_id\":\"61503e85fc13ae62f500005f\",\"username\":\"Cayla\",\"password\":\"1dsqU9oObe5v\",\"email\":\"chugoz@feedburner.com\",\"mobile\":\"9309704562\",\"ic_number\":\"S6343338G\"},{\"user_id\":\"61503e85fc13ae62f5000060\",\"username\":\"Vaclav\",\"password\":\"y3v0jm\",\"email\":\"vbroadwell10@auda.org.au\",\"mobile\":\"4857190800\",\"ic_number\":\"S7363697O\"},{\"user_id\":\"61503e85fc13ae62f5000061\",\"username\":\"Esteban\",\"password\":\"SXpSmQAQfZf\",\"email\":\"egoaks11@sun.com\",\"mobile\":\"1207253092\",\"ic_number\":\"S2213729Y\"},{\"user_id\":\"61503e85fc13ae62f5000062\",\"username\":\"Ambur\",\"password\":\"P3PkxCrKnZ\",\"email\":\"askyner12@360.cn\",\"mobile\":\"4083210400\",\"ic_number\":\"S8425903K\"},{\"user_id\":\"61503e85fc13ae62f5000063\",\"username\":\"Gill\",\"password\":\"Us9M0t\",\"email\":\"gdoni13@zimbio.com\",\"mobile\":\"3973186214\",\"ic_number\":\"S2156611A\"},{\"user_id\":\"61503e85fc13ae62f5000064\",\"username\":\"Costa\",\"password\":\"H0i1Hkq7DHR\",\"email\":\"csancroft14@squidoo.com\",\"mobile\":\"8557161704\",\"ic_number\":\"S2389049T\"},{\"user_id\":\"61503e85fc13ae62f5000065\",\"username\":\"Egbert\",\"password\":\"eQmqNv\",\"email\":\"eedeson15@google.ru\",\"mobile\":\"9732890397\",\"ic_number\":\"S3434780E\"},{\"user_id\":\"61503e85fc13ae62f5000066\",\"username\":\"Raymond\",\"password\":\"S6ue0bso1khu\",\"email\":\"rcodeman16@angelfire.com\",\"mobile\":\"4353987393\",\"ic_number\":\"S3914912B\"},{\"user_id\":\"61503e85fc13ae62f5000067\",\"username\":\"Hollyanne\",\"password\":\"oopoxl2n84\",\"email\":\"hstealfox17@alibaba.com\",\"mobile\":\"8779568450\",\"ic_number\":\"S7527204J\"},{\"user_id\":\"61503e85fc13ae62f5000068\",\"username\":\"Dorri\",\"password\":\"by7bAI7cMiT\",\"email\":\"dsignorelli18@unblog.fr\",\"mobile\":\"4074403474\",\"ic_number\":\"S5808691F\"},{\"user_id\":\"61503e85fc13ae62f5000069\",\"username\":\"Ursala\",\"password\":\"VoADb1N\",\"email\":\"ubelhome19@marriott.com\",\"mobile\":\"1557826375\",\"ic_number\":\"S8993741P\"},{\"user_id\":\"61503e85fc13ae62f500006a\",\"username\":\"Codie\",\"password\":\"YOuYL2f0SAhD\",\"email\":\"ctoft1a@irs.gov\",\"mobile\":\"8207445582\",\"ic_number\":\"S4497903M\"},{\"user_id\":\"61503e85fc13ae62f500006b\",\"username\":\"Stacee\",\"password\":\"xpaEL3NlZ\",\"email\":\"swentworth1b@w3.org\",\"mobile\":\"3925496446\",\"ic_number\":\"S1265185L\"},{\"user_id\":\"61503e85fc13ae62f500006c\",\"username\":\"Patty\",\"password\":\"PPrVeHQCITRs\",\"email\":\"pgascar1c@techcrunch.com\",\"mobile\":\"8825580184\",\"ic_number\":\"S0503779D\"},{\"user_id\":\"61503e85fc13ae62f500006d\",\"username\":\"Mellisa\",\"password\":\"rAuifXp\",\"email\":\"mfoan1d@odnoklassniki.ru\",\"mobile\":\"2078597136\",\"ic_number\":\"S6907564Z\"}]"
+				}
+			]
+		},
+		{
+			"name": "deleteTransactionByTID",
+			"request": {
+				"url": {
+					"raw": "https://nus-moneyapp-backend.herokuapp.com/transactions/delete/by-tid?transaction_id=61504ac7fc13ae132b000000",
+					"protocol": "https",
+					"host": [
+						"nus-moneyapp-backend.herokuapp.com"
+					],
+					"port": "443",
+					"path": [
+						"transactions",
+						"delete",
+						"by-tid"
+					],
+					"query": [
+						{
+							"key": "transaction_id",
+							"value": "61504ac7fc13ae132b000000",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "caf23836-54ac-4cbe-8e22-3e5bcf5ad532",
+					"name": "deleteTransactionByTID",
+					"originalRequest": {
+						"url": {
+							"raw": "https://nus-moneyapp-backend.herokuapp.com/transactions/delete/by-tid?transaction_id=61504ac7fc13ae132b000000",
+							"protocol": "https",
+							"host": [
+								"nus-moneyapp-backend.herokuapp.com"
+							],
+							"port": "443",
+							"path": [
+								"transactions",
+								"delete",
+								"by-tid"
+							],
+							"query": [
+								{
+									"key": "transaction_id",
+									"value": "61504ac7fc13ae132b000000",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "20",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "text/html; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 28 Sep 2021 11:00:52 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"14-Jsz+E06Njxz8zVr6bTC4NkQYpow\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 46,
+					"body": "Transaction Deleted!"
+				}
+			]
+		}
+	]
+}
