@@ -77,9 +77,11 @@ const deleteTransactionByTID = (tid) => {
   });
 }
 
-const deleteTransaction = (tid) => {
+const deleteTransaction = (e) => {
+  let tid = e.target.id
   deleteTransactionByTID(tid);
-  document.getElementById(`${tid}`).outerHTML=""
+  document.getElementById(`${tid}`).parentNode.remove()
+
 }
 
 
@@ -91,23 +93,33 @@ function addTransactionDOM(transaction) {
   if (transaction.transaction_type === "credit") {
     const income_item = document.createElement("li");
     income_item.classList.add("plus");
-    income_item.setAttribute("id", transaction.transaction_id)
     income_item.innerHTML = `${transaction.transaction_title}  <span> $ ${Math.abs(
       transaction.amount
-    )}</span><button class="delete-btn" onclick="deleteTransaction(${transaction.transaction_id})">x</button> 
-    `;
+    )}`;
+  
+    const button = document.createElement("button");
+    button.classList.add("delete-btn");
+    button.innerHTML = "x";
+    button.id = `${transaction.transaction_id}`
+    button.addEventListener("click", deleteTransaction);
+    income_item.appendChild(button)
   
     list.appendChild(income_item);
   }
   if (transaction.transaction_type === "debit") {
     const expense_item = document.createElement("li");
-    expense_item.setAttribute("id", transaction.transaction_id)
     expense_item.classList.add("minus");
     expense_item.innerHTML = `
     ${transaction.transaction_title} <span> -$ ${Math.abs(
       transaction.amount
-    )}</span><button class="delete-btn" onclick="deleteTransaction(${transaction.transaction_id})">x</button> 
-    `;
+    )}`;
+
+    const button = document.createElement("button");
+    button.classList.add("delete-btn");
+    button.innerHTML = "x";
+    button.id = `${transaction.transaction_id}`
+    button.addEventListener("click", deleteTransaction);
+    expense_item.appendChild(button)
   
     list.appendChild(expense_item);
   }
