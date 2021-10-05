@@ -63,15 +63,15 @@ const getTransactionData = () => {
 const deleteTransactionByTID = (tid) => {
   let querryStr = "https://nus-moneyapp-backend.herokuapp.com/transactions/delete/by-tid?transaction_id=" + tid;
 
+  console.log(tid)
   $.ajax({
     url: querryStr,
-    type: 'DELETE',
     dataType: 'json',
     async: false,
     success: function() {
     console.log("Delete request was successful")
     },
-    error: function (jqXhr, textStatus, errorMessage) {
+    error: function (errorMessage) {
       console.log(errorMessage)
     }
   });
@@ -80,7 +80,7 @@ const deleteTransactionByTID = (tid) => {
 const deleteTransaction = (e) => {
   let tid = e.target.id
   deleteTransactionByTID(tid);
-  document.getElementById(`${tid}`).parentNode.remove()
+  filterTransaction()
 
 }
 
