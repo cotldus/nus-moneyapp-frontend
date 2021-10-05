@@ -28,7 +28,7 @@ function postToServer(e){
   postDataJSON = JSON.stringify(postData);
   console.log(postDataJSON);
   addData(postDataJSON);
-  filterTransaction();
+  init();
 }  
 
 //url: "https://varlabs.comp.nus.edu.sg/fintech/itemsapi.php"
